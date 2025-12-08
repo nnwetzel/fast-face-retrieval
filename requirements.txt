@@ -1,0 +1,6 @@
+deeplake<4
+torch
+torchvision
+tqdm
+pillow
+numpy
