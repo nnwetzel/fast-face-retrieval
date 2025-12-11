@@ -29,8 +29,8 @@ def load_deeplake_dataset(hub_uri):
     else:
         ds = deeplake.load(hub_uri)
 
-    img_field = next((n for n in ("images", "image", "img") if n in ds), None)
-    label_field = next((n for n in ("labels", "label", "y") if n in ds), None)
+    img_field = next((n for n in ("images",) if n in ds), None)
+    label_field = next((n for n in ("name",) if n in ds), None)
     if img_field is None:
         raise RuntimeError(f"No image field found in deeplake dataset {hub_uri}")
 
